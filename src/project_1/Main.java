@@ -1,56 +1,56 @@
 import java.io.*;
+import java.net.Socket;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public void main(String[] args) throws IOException {
 //        StreamManager streamManager = new StreamManager(System.in);
-//        for (String arg : args) {
-//            System.out.println(streamManager);
-//        }
 
-        // https:// jen kov.com/tutorials/java-io/print writer.html
-        // https:// jen kov.com/tutorials/java-io/input stream.html
-        // https:// jen kov.com/tutorials/java-io/arrays.html
-        // https:// www.youtube.com/watch?v=-xK gxqG411c
+        // https:// www.bael dung.com/java-lang-system
 
-        // looks like buffer?
-        byte[] bytes = new byte[16384];
-        byte[] dinamicChars = "word".getBytes();
-        //write data into byte array...
-        for (byte dinamicChar : dinamicChars){
-            bytes = dinamicChars;
-        }
+//        InputStreamReader isr = new InputStreamReader(System.in);
+////        OutputStreamWriter osw = new OutputStreamWriter(System.out);
+////
+//////        while (isr.read() != -1) {
+////
+//////        }
+////        int data = isr.read();
+////        while(data != -1){
+////            char theChar = (char) data;
+////            data = isr.read();
+////            osw.write(theChar);
+////        }
+////
+////        isr.close();
 
-        InputStream input = new ByteArrayInputStream(bytes);
+        // https:// jen kov.com/tutorials/java-io/input stream reader.html
+        InputStreamReader isr = new InputStreamReader(System.in);
+        OutputStreamWriter osw = new OutputStreamWriter(System.out);
 
-
-        //read first byte
-        int data = input.read();
+        int data = isr.read();
         while(data != -1) {
-            //do something with data
-            PrintStream printOut = (char) data;
-            printOut.println();
-            //read next byte
-            data = input.read();
+            osw.write((char) data);
+            osw.flush();
+            data = isr.read();
         }
 
-//        OutputStream output = new FileOutputStream("c:\\data\\system.out.txt");
-//        PrintStream printOut = new PrintStream(output);
 
-//        Reader reader =
 
-//        System.setOut(printOut);
+//        osw.write("Hello, World!");
 
-//        FileWriter  writer      = new FileWriter("d:\\data\\report.txt");
-//        PrintWriter printWriter = new PrintWriter(writer);
+//        osw.write(isr.read());
+//        String a = ;
+//        isr.close();
 
-//        InputStream inputStream = System.in;
 
-//        Reader inputStreamReader = new InputStreamReader(inputStream);
-//        OutputStream os =
-//        OutputStream output = new StringBuffer("c:\\data\\system.out.txt");
-//        PrintStream printOut = new PrintStream(output);
+//        while (osw.write(a) != -1) {
 
-//        System.setOut(printOut);
+//        }
+//        osw.write(a);
+//        osw.flush();
+
+//        System.setOut(new PrintStream("filename.txt"));
 
 //        Console console = new Console();
         // ve are validating properly "something", and if it is true -> then work
