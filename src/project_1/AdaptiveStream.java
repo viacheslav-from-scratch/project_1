@@ -1,6 +1,7 @@
 import java.io.*;
 
 // https:// www.bael dung.com/convert-input-stream-to-string
+//https:// www.java thinking.com/blog/guide-to-system-in-read/
 public class AdaptiveStream {
     private InputStream is;
     private OutputStreamWriter osw;
@@ -10,49 +11,25 @@ public class AdaptiveStream {
         this.osw = osw;
     }
 
-    public String input() {
-        is = new ByteArrayInputStream(originalString.getBytes());
-//        try {
-//            int data = this.isr.read();
-//            while(data != -1) {
-//                osw.write((char) data);
-//                osw.flush();
-//                data = this.isr.read();
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return "nothing";
-    }
-
-    public void print(String str) {
-//    PrintWriter
-    osw = new OutputStreamWriter(System.out);
-        try {
-            int data = isr.read();
-            while(data != -1) {
-                osw.write((char) data);
-                osw.flush();
-                data = isr.read();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-//    public String out(String str){
+    public String input() throws IOException {
+//        InputStream inputStream = new ByteArrayInputStream(str.getBytes());
 //
-//        osw = new OutputStreamWriter(System.out);
-//        try {
-//            int data = isr.read();
-//            while(data != -1) {
-//                osw.write((char) data);
-//                osw.flush();
-//                data = isr.read();
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
+//        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+//        int nRead;
+//        byte[] data = new byte[1024];
+//        while ((nRead = inputStream.read(data, 0, data.length)) != -1) {
+//            buffer.write(data, 0, nRead);
 //        }
-//    }
+//
+//        buffer.flush();
+//        byte[] byteArray = buffer.toByteArray();
+//
+//        return new String(byteArray, StandardCharsets.UTF_8);
+        return "nothing";
+    }
+
+    public void print(String str) throws IOException {
+        InputStream is = new ByteArrayInputStream(str.getBytes());
+        System.out.print((char) is.read()); // Read a character
+    }
 }
