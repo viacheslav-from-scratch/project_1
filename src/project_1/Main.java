@@ -1,58 +1,38 @@
 import java.io.*;
-import java.net.Socket;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.nio.charset.StandardCharsets;
 
 public class Main {
-    public void main(String[] args) throws IOException {
-//        StreamManager streamManager = new StreamManager(System.in);
-
-        // https:// www.bael dung.com/java-lang-system
-
-//        InputStreamReader isr = new InputStreamReader(System.in);
-////        OutputStreamWriter osw = new OutputStreamWriter(System.out);
-////
-//////        while (isr.read() != -1) {
-////
-//////        }
-////        int data = isr.read();
-////        while(data != -1){
-////            char theChar = (char) data;
-////            data = isr.read();
-////            osw.write(theChar);
-////        }
-////
-////        isr.close();
-
+    public static void main(String[] args) throws IOException {
         // https:// jen kov.com/tutorials/java-io/input stream reader.html
-        InputStreamReader isr = new InputStreamReader(System.in);
-        OutputStreamWriter osw = new OutputStreamWriter(System.out);
+        AdaptiveStream stream = new AdaptiveStream(new InputStreamReader(System.in),
+                new OutputStreamWriter(System.out));
 
-        int data = isr.read();
-        while(data != -1) {
-            osw.write((char) data);
-            osw.flush();
-            data = isr.read();
+//        input()
+//        print()
+
+        String originalString = "randomAlphabetic(8)";
+        InputStream inputStream = new ByteArrayInputStream(originalString.getBytes());
+
+        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+        int nRead;
+        byte[] data = new byte[1024];
+        while ((nRead = inputStream.read(data, 0, data.length)) != -1) {
+            buffer.write(data, 0, nRead);
         }
 
+        buffer.flush();
+        byte[] byteArray = buffer.toByteArray();
 
+        String text = new String(byteArray, StandardCharsets.UTF_8);
+        System.out.println(text);
+//        assertThat(text, equalTo(originalString));
 
-//        osw.write("Hello, World!");
+        stream.input();
+        stream.print("everything");
+//        System.out.println(str);
+//        adaptiveStream.out(str);
 
-//        osw.write(isr.read());
-//        String a = ;
-//        isr.close();
-
-
-//        while (osw.write(a) != -1) {
-
-//        }
-//        osw.write(a);
-//        osw.flush();
-
-//        System.setOut(new PrintStream("filename.txt"));
-
-//        Console console = new Console();
+//      Console console = new Console();
         // ve are validating properly "something", and if it is true -> then work
         // if it validates, then console should open validated file
         // and
@@ -63,7 +43,7 @@ public class Main {
         // when console open the file
         // and write output or something like that
         // wait until I write and more think
-//        new Validate(console.open(new Validate(new File())));
+//      new Validate(console.open(new Validate(new File())));
     }
 }
 

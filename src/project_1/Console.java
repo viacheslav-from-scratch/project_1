@@ -1,10 +1,11 @@
 import java.io.File;
-import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
-public class Console extends SmartStream {
+public class Console extends AdaptiveStream {
 
-    public Console(InputStream is) {
-        super(is);
+    public Console(InputStreamReader isr, OutputStreamWriter osw) {
+        super(isr, osw);
     }
 
     public void open(File file){
