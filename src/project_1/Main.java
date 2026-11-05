@@ -1,15 +1,58 @@
-import java.io.ByteArrayInputStream;
-import java.io.File;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        String str = "";
+    public static void main(String[] args) throws IOException {
+//        StreamManager streamManager = new StreamManager(System.in);
+//        for (String arg : args) {
+//            System.out.println(streamManager);
+//        }
 
-        for (String arg : args) {
-            str += new StreamManager(new ByteArrayInputStream(arg.getBytes()));
+        // https:// jen kov.com/tutorials/java-io/print writer.html
+        // https:// jen kov.com/tutorials/java-io/input stream.html
+        // https:// jen kov.com/tutorials/java-io/arrays.html
+        // https:// www.youtube.com/watch?v=-xK gxqG411c
+
+        // looks like buffer?
+        byte[] bytes = new byte[16384];
+        byte[] dinamicChars = "word".getBytes();
+        //write data into byte array...
+        for (byte dinamicChar : dinamicChars){
+            bytes = dinamicChars;
         }
 
-        Console console = new Console();
+        InputStream input = new ByteArrayInputStream(bytes);
+
+
+        //read first byte
+        int data = input.read();
+        while(data != -1) {
+            //do something with data
+            PrintStream printOut = (char) data;
+            printOut.println();
+            //read next byte
+            data = input.read();
+        }
+
+//        OutputStream output = new FileOutputStream("c:\\data\\system.out.txt");
+//        PrintStream printOut = new PrintStream(output);
+
+//        Reader reader =
+
+//        System.setOut(printOut);
+
+//        FileWriter  writer      = new FileWriter("d:\\data\\report.txt");
+//        PrintWriter printWriter = new PrintWriter(writer);
+
+//        InputStream inputStream = System.in;
+
+//        Reader inputStreamReader = new InputStreamReader(inputStream);
+//        OutputStream os =
+//        OutputStream output = new StringBuffer("c:\\data\\system.out.txt");
+//        PrintStream printOut = new PrintStream(output);
+
+//        System.setOut(printOut);
+
+//        Console console = new Console();
         // ve are validating properly "something", and if it is true -> then work
         // if it validates, then console should open validated file
         // and
@@ -20,20 +63,7 @@ public class Main {
         // when console open the file
         // and write output or something like that
         // wait until I write and more think
-        new Validate(console.open(new Validate(new File())));
-
-        String str = "";
-        for (String arg : args){  // https:// zetcode.com/java/io-input stream/
-            str += arg;
-        }
-
-//        InputStreamReader isr = new InputStreamReader(new InputStream(io.output(str)));
-        System.out.println(io.output(str));
-
-        io.output.println();
-
-
-
+//        new Validate(console.open(new Validate(new File())));
     }
 }
 

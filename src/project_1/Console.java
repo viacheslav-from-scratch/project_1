@@ -1,7 +1,7 @@
 import java.io.File;
 import java.io.InputStream;
 
-public class Console extends StreamManager {
+public class Console extends SmartStream {
 
     public Console(InputStream is) {
         super(is);
@@ -13,7 +13,7 @@ public class Console extends StreamManager {
     public void save(){
 
     }
-    public void saveas(File file){
+    public void saveAs(File file){
 
     }
     public void help(){
