@@ -1,17 +1,19 @@
 import java.io.*;
+import java.util.Scanner;
 
 // https:// www.bael dung.com/convert-input-stream-to-string
 //https:// www.java thinking.com/blog/guide-to-system-in-read/
 public class AdaptiveStream {
-    private InputStream is;
+//    private InputStream is;
     private OutputStreamWriter osw;
 
-    public AdaptiveStream(InputStream is, OutputStreamWriter osw) {
-        this.is = is;
+    public AdaptiveStream(/*InputStream is,*/ OutputStreamWriter osw) {
+//        this.is = is;
         this.osw = osw;
     }
 
     public String input() throws IOException {
+
 //        InputStream inputStream = new ByteArrayInputStream(str.getBytes());
 //
 //        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
@@ -29,7 +31,24 @@ public class AdaptiveStream {
     }
 
     public void print(String str) throws IOException {
+
+//        System.out.print((char) is.read()); // Read a character
+//        String line = reader.readLine();
+//        System.out.println("You entered: " + line);
+
         InputStream is = new ByteArrayInputStream(str.getBytes());
-        System.out.print((char) is.read()); // Read a character
+        OutputStreamWriter osw = new OutputStreamWriter(System.out);
+
+        int ch;
+        while ((ch = is.read()) != -1) {
+            osw.write((char) ch);
+            osw.flush();
+        }
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter a number: ");
+        // Read the entire line as a string and convert it to an integer
+//        int number = Integer.parseInt(scanner.nextLine());
+//        System.out.println("You entered: " + number);
+//        scanner.close();
     }
 }

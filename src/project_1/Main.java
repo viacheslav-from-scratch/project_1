@@ -4,8 +4,14 @@ import java.nio.charset.StandardCharsets;
 public class Main {
     public static void main(String[] args) throws IOException {
         // https:// jen kov.com/tutorials/java-io/input stream reader.html
-        AdaptiveStream stream = new AdaptiveStream(new ByteArrayInputStream(System.in.readAllBytes()),
-                new OutputStreamWriter(System.out));
+        AdaptiveStream stream = new AdaptiveStream(new OutputStreamWriter(System.out));
+
+//        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+//            System.out.println("Enter a line of text:");
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 //        input()
 //        print()

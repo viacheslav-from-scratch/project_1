@@ -5,7 +5,7 @@ import java.io.OutputStreamWriter;
 public class Console extends AdaptiveStream {
 
     public Console(InputStream is, OutputStreamWriter osw) {
-        super(is, osw);
+        super(/*is,*/ osw);
     }
 
     public void open(File file){
