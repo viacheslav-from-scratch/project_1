@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Console extends AdvancedStream, Validator, FileManager {
+public class Console extends FileManager {
     public Console(InputStreamReader isr, OutputStreamWriter osw) {
         super(isr, osw);
     }

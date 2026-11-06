@@ -1,2 +1,2 @@
-public abstract class SaveManager {
+public abstract class SaveManager extends FileValidator {
 }

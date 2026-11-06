@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class FileManager extends FileValidator, SaveManager {
+public class FileManager extends SaveManager {
     public FileManager(InputStreamReader isr, OutputStreamWriter osw) {
         super(isr, osw);
     }
@@ -57,7 +57,5 @@ public class FileManager extends FileValidator, SaveManager {
     public void append(){
 
     }
-//
-//
 }
 

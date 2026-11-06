@@ -1,2 +1,2 @@
-public abstract class XMLExtension {
+public class XMLExtension {
 }
