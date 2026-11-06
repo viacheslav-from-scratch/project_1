@@ -1,4 +1,9 @@
-public abstract class Validator extends FileManager {
-    public abstract boolean validateFile(String filename);
-    public abstract boolean validateCommand(String arg);
+public class Validator {
+    public boolean validateFile(String filename) {
+        return false;
+    }
+
+    public boolean validateCommand(String arg) {
+        return false;
+    }
 }

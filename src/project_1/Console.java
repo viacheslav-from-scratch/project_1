@@ -1,4 +1,8 @@
-public class Console extends Validator {
+public class Console {
+    private FileManager fileManager = new FileManager();
+    private Validator validator = new Validator();
+    private AdvancedStream advancedStream = new AdvancedStream();
+
     public boolean validateFile(String filename){
         if(filename.equals("has .txt")){
             return true;
@@ -73,6 +77,7 @@ public class Console extends Validator {
     }
 
     public void run(String[] args){
+
 //        open(args);
 //        save(args);
 //        saveAs(args);

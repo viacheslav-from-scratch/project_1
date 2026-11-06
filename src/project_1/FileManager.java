@@ -1,6 +1,17 @@
-public abstract class FileManager {
-    public abstract void open(String[] args);
-    public abstract void save(String[] args);
-    public abstract void saveAs(String[] args);
-    public abstract void close(String[] args);
+public class FileManager {
+    public void open(String[] args) {
+
+    }
+
+    public void save(String[] args) {
+
+    }
+
+    public void saveAs(String[] args) {
+
+    }
+
+    public void close(String[] args) {
+
+    }
 }
