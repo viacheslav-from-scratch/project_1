@@ -1,10 +1,26 @@
 import java.io.Console;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Run {
     protected Console console = System.console();
     private XMLManager xmlManager = new XMLManager();
     private Validate validate = new Validate();
 //    private AdvancedStream
+    private final List<String> commands = new ArrayList<>();
+
+    public Run() {
+        commands.add("open");
+        commands.add("save");
+        commands.add("saveas");
+        commands.add("close");
+        commands.add("help");
+        commands.add("exit");
+    }
+
+    public int count(){
+        return commands.toArray().length;
+    }
 
     public void open(String[] args){
         if(validate.command(args[0])){
@@ -51,17 +67,14 @@ public class Run {
     }
 
     public void execute(String args){
-        for (String arg : args) {
-            open(args);
-            save(args);
-            saveAs(args);
-            help(args);
-            close(args);
-            exit(args);
-        }
+        System.out.println(args);
     }
 
     public boolean executable(String args){
-
+        for (int i = 0; i < this.count(); i++) {
+            if (commands.contains(args))
+                return true;
+        }
+        return false;
     }
 }
