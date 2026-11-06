@@ -1,12 +1,12 @@
-public class Validator {
-    public boolean validateFile(String filename){
+public class Validate {
+    public boolean file(String filename){
         if(filename.equals("has .txt")){
             return true;
         }
         return true;
     }
 
-    public boolean validateCommand(String arg){
+    public boolean command(String arg){
         if(arg.equals("open")){
             return true;
         }

@@ -1,12 +1,12 @@
 public class Console {
     private FileManager fileManager = new FileManager();
-    private Validator validator = new Validator();
+    private Validate validate = new Validate();
     private AdvancedStream stream = new AdvancedStream();
 
     public void open(String[] args){
-        if(validateCommand(args[0])){
-            if(validateFile(args[1])){
-                if(validateCommand(args[0]) && validateFile(args[1])){
+        if(validate.command(args[0])){
+            if(validate.file(args[1])){
+                if(validate.command(args[0]) && validate.command(args[1])){
                     System.out.println("true");
                 } else System.out.println("false");
             } else System.out.println("false");
@@ -14,15 +14,15 @@ public class Console {
     }
 
     public void save(String[] args){
-        if(validateCommand(args[0])){
+        if(validate.command(args[0])){
             System.out.println("true");
         } else System.out.println("false");
     }
 
     public void saveAs(String[] args){
-        if(validateCommand(args[0])){
-            if(validateFile(args[1])){
-                if(validateCommand(args[0]) && validateFile(args[1])){
+        if(validate.command(args[0])){
+            if(validate.file(args[1])){
+                if(validate.command(args[0]) && validate.file(args[1])){
                     System.out.println("true");
                 } else System.out.println("false");
             } else System.out.println("false");
@@ -30,19 +30,19 @@ public class Console {
     }
 
     public void help(String[] args){
-        if(validateCommand(args[0])){
+        if(validate.command(args[0])){
             System.out.println("true");
         } else System.out.println("false");
     }
 
     public void close(String[] args){
-        if(validateCommand(args[0])){
+        if(validate.command(args[0])){
             System.out.println("true");
         } else System.out.println("false");
     }
 
     public void exit(String[] args){
-        if(validateCommand(args[0])){
+        if(validate.command(args[0])){
             System.out.println("true");
         } else System.out.println("false");
     }

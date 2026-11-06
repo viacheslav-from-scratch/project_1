@@ -1,4 +1,4 @@
-public class FileManager {
+public class FileManager extends  {
     SaveManager saveManager = new SaveManager();
     XMLManager xmlManager = new XMLManager();
     Validator validator = new Validator();
