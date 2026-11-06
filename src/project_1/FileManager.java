@@ -1,21 +1,9 @@
-public class FileManager extends  {
-    SaveManager saveManager = new SaveManager();
-    XMLManager xmlManager = new XMLManager();
-    Validator validator = new Validator();
+public abstract class FileManager extends AdvancedSave {
+    public abstract void open(String[] args);
 
-    public void open(String[] args) {
+    public abstract void save(String[] args);
 
-    }
+    public abstract void saveAs(String[] args);
 
-    public void save(String[] args) {
-
-    }
-
-    public void saveAs(String[] args) {
-
-    }
-
-    public void close(String[] args) {
-
-    }
+    public abstract void close(String[] args);
 }

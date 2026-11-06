@@ -5,14 +5,9 @@ import java.io.OutputStreamWriter;
 //https:// docs.oracle.com/en/java/java se/21/docs/api/java.base/java/io/InputStream.html
 //https:// www.youtube.com/watch?v=-xKg xqG411c
 // Using Low Level Code, but still more reliable for using in high level
-public class AdvancedStream extends Console {
+public class AdvancedStream {
     protected InputStreamReader isr;
     protected OutputStreamWriter osw;
-
-    public AdvancedStream(InputStreamReader isr, OutputStreamWriter osw) {
-        this.isr = isr;
-        this.osw = osw;
-    }
 
     public void print(String str) {
         try {

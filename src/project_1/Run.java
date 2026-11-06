@@ -1,7 +1,10 @@
-public class Console {
-    private FileManager fileManager = new FileManager();
+import java.io.Console;
+
+public class Run {
+    protected Console console = System.console();
+    private XMLManager xmlManager = new XMLManager();
     private Validate validate = new Validate();
-    private AdvancedStream stream = new AdvancedStream();
+//    private AdvancedStream
 
     public void open(String[] args){
         if(validate.command(args[0])){
@@ -47,13 +50,14 @@ public class Console {
         } else System.out.println("false");
     }
 
-    public void run(String[] args){
-
-//        open(args);
-//        save(args);
-//        saveAs(args);
-//        help(args);
-//        close(args);
-//        exit(args);
+    public void execute(String[] args){
+        for (String arg : args) {
+            open(args);
+            save(args);
+            saveAs(args);
+            help(args);
+            close(args);
+            exit(args);
+        }
     }
 }

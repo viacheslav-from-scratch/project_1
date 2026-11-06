@@ -1,8 +1,9 @@
-public class Main {
-    public static void main(String[] args) {
-        Console console = new Console();
+import java.io.Console;
 
-        console.run(args);
+public class Main extends Run {
+    public static void main(String[] args) {
+        Run run = new Run();
+        run.execute();
     }
 }
 
