@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 //https:// docs.oracle.com/en/java/java se/21/docs/api/java.base/java/io/InputStream.html
 //https:// www.youtube.com/watch?v=-xKg xqG411c
 // Using Low Level Code, but still more reliable for using in high level
-public class AdvancedStream extends BasicFunctional {
+public abstract class AdvancedStream {
     protected InputStreamReader isr;
     protected OutputStreamWriter osw;
 
@@ -15,76 +15,15 @@ public class AdvancedStream extends BasicFunctional {
         this.osw = osw;
     }
 
-    public void print(String str) {
-        try {
-            osw.write(str + "\n");
-            osw.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public abstract void print(String str);
 
-    public void print(String str, boolean end) {
-        try {
-            if(end)
-                osw.write(str + "\n");
-            else
-                osw.write(str);
-            osw.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public abstract void print(String str, boolean end);
 
-    public String input() {
-        try {
-            BufferedReader bf = new BufferedReader(isr);
+    public abstract String input();
 
-            return bf.readLine();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    public String input(boolean end) {
-        try {
-            if (end)
-                osw.write("\n");
-            else
-                osw.flush();
-            BufferedReader bf = new BufferedReader(isr);
+    public abstract String input(boolean end);
 
-            return bf.readLine();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public abstract String input(String str);
 
-    public String input(String str) {
-        try {
-            osw.write(str + "\n");
-            osw.flush();
-
-            BufferedReader bf = new BufferedReader(isr);
-
-            return bf.readLine();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public String input(String str, boolean end)  {
-        try {
-            if(end)
-                osw.write(str + "\n");
-            else
-                osw.write(str);
-            osw.flush();
-
-            BufferedReader bf = new BufferedReader(isr);
-
-            return bf.readLine();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public abstract String input(String str, boolean end);
 }

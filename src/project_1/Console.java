@@ -1,34 +1,79 @@
-import java.io.File;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Console extends FileManager {
+public class Console extends SaveManager {
+
     public Console(InputStreamReader isr, OutputStreamWriter osw) {
         super(isr, osw);
     }
 
     @Override
-    public void open(File file) {
-        super.open(file);
+    public void open(String str) {
+
     }
 
     @Override
     public void save() {
-        super.save();
+
     }
 
     @Override
-    public void saveAs(File file) {
-        super.saveAs(file);
+    public void saveAs(String str) {
+
     }
 
     @Override
     public void help() {
-        super.help();
+
     }
 
     @Override
     public void exit() {
-        super.exit();
+
+    }
+
+    @Override
+    public void import_() {
+
+    }
+
+    @Override
+    public void export() {
+
+    }
+
+    @Override
+    public void xmlExtension() {
+
+    }
+
+    @Override
+    public void print(String str) {
+
+    }
+
+    @Override
+    public void print(String str, boolean end) {
+
+    }
+
+    @Override
+    public String input() {
+        return "";
+    }
+
+    @Override
+    public String input(boolean end) {
+        return "";
+    }
+
+    @Override
+    public String input(String str) {
+        return "";
+    }
+
+    @Override
+    public String input(String str, boolean end) {
+        return "";
     }
 }

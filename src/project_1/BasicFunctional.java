@@ -1,24 +1,19 @@
-import java.io.File;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 // basic functions for Validate, Console, FileManager, they are use the same functions
-public class BasicFunctional {
-    public void open(File file){
-
+public abstract class BasicFunctional extends AdvancedStream {
+    public BasicFunctional(InputStreamReader isr, OutputStreamWriter osw) {
+        super(isr, osw);
     }
 
-    public void save(){
+    public abstract void open(String str);
 
-    }
+    public abstract void save();
 
-    public void saveAs(File file){
+    public abstract void saveAs(String str);
 
-    }
+    public abstract void help();
 
-    public void help(){
-
-    }
-
-    public void exit(){
-
-    }
+    public abstract void exit();
 }

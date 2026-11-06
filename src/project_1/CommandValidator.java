@@ -3,38 +3,22 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 // if open is oepn = isn't Validate, if open is open = is Validate
-public class CommandValidator extends AdvancedFunctional {
-    public Validator(InputStreamReader isr, OutputStreamWriter osw) {
+public abstract class CommandValidator extends AdvancedFunctional {
+    public CommandValidator(InputStreamReader isr, OutputStreamWriter osw) {
         super(isr, osw);
     }
 
-    @Override
-    public void open(File file) {
+    public abstract void open(String str);
 
-    }
+    public abstract void save();
 
-    @Override
-    public void save() {
+    public abstract void saveAs(String str);
 
-    }
+    public abstract void help();
 
-    @Override
-    public void saveAs(File file) {
+    public abstract void exit();
 
-    }
+    public abstract void import_();
 
-    @Override
-    public void help() {
-
-    }
-
-    @Override
-    public void exit() {
-
-    }
-
-    @Override
-    public void somethingMore() {
-
-    }
+    public abstract void export();
 }

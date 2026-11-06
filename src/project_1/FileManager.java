@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class FileManager extends SaveManager {
+public abstract class FileManager extends XMLExtension {
     public FileManager(InputStreamReader isr, OutputStreamWriter osw) {
         super(isr, osw);
     }
@@ -57,5 +57,20 @@ public class FileManager extends SaveManager {
     public void append(){
 
     }
+    public abstract void open(String str);
+
+    public abstract void save();
+
+    public abstract void saveAs(String str);
+
+    public abstract void help();
+
+    public abstract void exit();
+
+    public abstract void import_();
+
+    public abstract void export();
+
+    public abstract void xmlExtension();
 }
 
