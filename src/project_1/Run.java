@@ -50,7 +50,7 @@ public class Run {
         } else System.out.println("false");
     }
 
-    public void execute(String[] args){
+    public void execute(String args){
         for (String arg : args) {
             open(args);
             save(args);
@@ -59,5 +59,9 @@ public class Run {
             close(args);
             exit(args);
         }
+    }
+
+    public boolean executable(String args){
+
     }
 }
