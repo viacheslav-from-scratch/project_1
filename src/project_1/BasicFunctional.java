@@ -15,6 +15,6 @@ public abstract class BasicFunctional {
 
     }
     public void exit(){
-        System.exit(0);
+
     }
 }
