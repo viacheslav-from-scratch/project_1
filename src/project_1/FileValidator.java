@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 // if file.txt is file.ttx = isn't Validate, if file.txt is file.txt = is Validate
-public class FileValidator extends Validator {
+public class FileValidator extends AdvancedFunctional, XMLExtension {
     public FileValidator(InputStreamReader isr, OutputStreamWriter osw) {
         super(isr, osw);
     }

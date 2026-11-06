@@ -6,11 +6,11 @@ import java.io.OutputStreamWriter;
 //https:// docs.oracle.com/en/java/java se/21/docs/api/java.base/java/io/InputStream.html
 //https:// www.youtube.com/watch?v=-xKg xqG411c
 // Using Low Level Code, but still more reliable for using in high level
-public class AdaptiveStream extends BasicFunctional {
+public class AdvancedStream extends BasicFunctional {
     protected InputStreamReader isr;
     protected OutputStreamWriter osw;
 
-    public AdaptiveStream(InputStreamReader isr, OutputStreamWriter osw) {
+    public AdvancedStream(InputStreamReader isr, OutputStreamWriter osw) {
         this.isr = isr;
         this.osw = osw;
     }

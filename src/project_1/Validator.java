@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 // if open is oepn = isn't Validate, if open is open = is Validate
-public class Validator extends AdaptiveStream {
+public class Validator extends AdvancedFunctional {
     public Validator(InputStreamReader isr, OutputStreamWriter osw) {
         super(isr, osw);
     }
