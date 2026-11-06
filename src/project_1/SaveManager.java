@@ -1,4 +1,4 @@
-public class SaveManager extends FileManager {
+public class SaveManager {
     public void saving(){
 
     }

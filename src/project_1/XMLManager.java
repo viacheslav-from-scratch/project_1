@@ -1,4 +1,4 @@
-public class XMLManager extends FileManager{
+public class XMLManager {
     public void openXml() {
 
     }

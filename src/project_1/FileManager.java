@@ -1,4 +1,8 @@
 public class FileManager {
+    SaveManager saveManager = new SaveManager();
+    XMLManager xmlManager = new XMLManager();
+    Validator validator = new Validator();
+
     public void open(String[] args) {
 
     }
