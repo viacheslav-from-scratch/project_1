@@ -1,4 +1,4 @@
-public class Console {
+public class Console extends Validator {
     public boolean validateFile(String filename){
         if(filename.equals("has .txt")){
             return true;
@@ -78,6 +78,6 @@ public class Console {
 //        saveAs(args);
 //        help(args);
 //        close(args);
-        exit(args);
+//        exit(args);
     }
 }
